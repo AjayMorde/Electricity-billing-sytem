@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Billing System</title>
+    <link rel="stylesheet" href="/css/index1.css">
+    <script src="https://kit.fontawesome.com/b16e4e26d6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <a class="navbar-brand" href="#"><img src="/images/logo.jpg" alt="brand-image" width="50px" height="50px"></a>
+        <h2 id="headl">Electric Billing System</h2>
+        <nav>
+            <ul id="sidemenu">
+                <li>
+                    <a href="index3">Home</a>
+                </li>
+                <li>
+                    <a href="index1" class="active">Add Bill</a>
+                </li>
+                <li>
+                    <a href="index2">Track Bills</a>
+                </li>
+                <li>
+                    <a href="index4">Pay Now</a>
+                </li>
+                <li>
+                    <a href="login">Log Out</a>
+                </li>
+                <i class="fa-solid fa-xmark non" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars non" id="open" onclick="openmenu()"></i>
+        </nav>
+    </header>
+
+    <form action="#" autocomplete="off" id="my-form">
+        <h3>ELECTRIC BILLING SYSTEM</h3>
+        <h6>KEEP TRACK OF YOUR ELECTRICITY BILLS!</h6>
+        <hr>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter the bill amount" step="0.01">
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment">
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+            <option value="online">Online</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" placeholder="Enter the bill description">
+
+        <label for="billingCycle">Billing Cycle:</label>
+        <select name="billingCycle" id="billingCycle">
+            <option value="Monthly">Monthly</option>
+            <option value="Bi-Monthly">Bi-Monthly</option>
+          
+        </select>
+
+        <label for="billDate">Bill Date:</label>
+        <input type="date" id="billDate" name="billDate">
+
+        <input type="submit" value="ADD BILL"></input>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/addBill.js"></script>
+
+</body>
+
+</html>
